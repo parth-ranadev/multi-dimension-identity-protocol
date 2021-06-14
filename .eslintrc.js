@@ -13,6 +13,10 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-plusplus': 'off',
     indent: ['error', 2],
+    'max-lines': [
+      'warn',
+      { max: 500, skipBlankLines: true, skipComments: true },
+    ],
   },
   plugins: ['jest'],
 };
