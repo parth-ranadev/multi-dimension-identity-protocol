@@ -4,8 +4,9 @@
   "description": "Multi Dimension Identity Protocol",
   "main": "./lib/mdip.js",
   "scripts": {
+    "build": "babel-node lib -d build",
     "start": "nodemon lib/mdip.js --exec babel-node ",
-    "dev": "MDIP_ENV=dev nodemon lib/node/http.js",
+    "dev": "npm run build && MDIP_ENV=dev nodemon build/node/http.js",
     "test": "jest --verbose --config ./jest.config.js",
     "lint": "eslint lib/*.js",
     "ipfs-api": "node lib/ipfs/ipfs.js",
